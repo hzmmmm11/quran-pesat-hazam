@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quran PESAT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Aplikasi Literasi Qur’an</p>
+          <h1>Quran PESAT</h1>
+        </div>
+
+        <nav class="tabs" aria-label="Navigasi utama">
+          <button class="tab active" data-target="surat-panel" type="button">Al-Qur’an</button>
+          <button class="tab" data-target="mentor-panel" type="button">Mentor Murajaah</button>
+        </nav>
+      </header>
+
+      <main>
+        <section id="surat-panel" class="panel active" aria-label="Menu Al-Qur'an">
+          <div id="statusText" class="status" aria-live="polite"></div>
+
+          <div class="surat-layout">
+            <aside class="surat-list-panel">
+              <h2>Daftar Surat</h2>
+              <div id="suratList" class="surat-list" aria-live="polite"></div>
+            </aside>
+
+            <div class="surat-detail-panel">
+              <div id="suratDetail" class="surat-detail"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="mentor-panel" class="panel" aria-label="Menu Mentor Murajaah">
+          <div class="mentor-header">
+            <div>
+              <h2>Mentor Murajaah</h2>
+              <p id="mentorSuratLabel" class="mentor-note">Pilih surat di menu Al-Qur’an terlebih dahulu.</p>
+            </div>
+            <div class="score-box">
+              <span>Skor</span>
+              <strong id="scoreValue">0</strong>
+            </div>
+          </div>
+
+          <div id="mentorStatus" class="status" aria-live="polite"></div>
+
+          <div class="mode-toggle" aria-label="Mode latihan">
+            <button class="mode-btn active" data-mode="tebak-ayat" type="button">Tebak Ayat</button>
+            <button class="mode-btn" data-mode="sambung-ayat" type="button">Sambung Ayat</button>
+          </div>
+
+          <div id="mentorQuestion" class="question-box" aria-live="polite"></div>
+          <div id="mentorOptions" class="answer-options" aria-live="polite"></div>
+          <div id="mentorFeedback" class="feedback" aria-live="polite"></div>
+
+          <div class="mentor-actions">
+            <button id="nextQuestionBtn" class="primary-btn" type="button">Soal Berikutnya</button>
+            <button id="restartBtn" class="secondary-btn" type="button">Mulai Lagi</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
